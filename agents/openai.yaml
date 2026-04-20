@@ -1,4 +1,4 @@
 version: 1
 display_name: OPIc Question Generator
-short_description: Generates realistic survey-based OPIc mock questions.
-default_prompt: Generate realistic OPIc mock questions based on my survey and target difficulty.
+short_description: Generates OPIc English practice questions and improves spoken answers.
+default_prompt: Generate OPIc English practice questions, or correct my answer and make it more natural.

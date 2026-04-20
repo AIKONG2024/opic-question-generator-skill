@@ -1,6 +1,6 @@
 ---
 name: opic-question-generator
-description: Use when the user wants realistic OPIc mock questions, survey-based combo sets, answer correction, natural expression rewrites, or level-styled examples such as IM, IH, and AL. Generates question sets using public OPIc structure, and can also correct user answers and rewrite them into clearer and more natural OPIc-style versions.
+description: Use when the user wants OPIc English practice questions, survey-based mock sets, answer correction, natural spoken rewrites, or IM/IH/AL-style speaking examples. This skill generates realistic OPIc English prompts and improves spoken answers in a way that is easy to practice aloud.
 ---
 
 # OPIc Question Generator
@@ -25,6 +25,7 @@ Use this skill when the user asks for:
 3. Prefer realistic OPIc-style wording over overly simple prompts.
 4. Build question sets around survey topics in bundles of three when possible.
 5. For higher difficulty mocks, place role-play late and place harder follow-up questions at the end.
+6. Accept plain-language requests by default and infer reasonable settings when the user does not provide them.
 
 ## Public Structure to Follow
 
@@ -336,9 +337,3 @@ Use examples like these when the user asks for difficulty-specific generation.
 - Tell me about a memorable or unusual experience and how you handled it.
 - Explain the situation and suggest two or three alternatives.
 - Give me as many details as possible.
-
-## References
-
-If you need the deeper research summary, read:
-
-- [opic_66_research.md](../opic_66_research.md)
