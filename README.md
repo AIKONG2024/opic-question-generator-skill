@@ -1,197 +1,102 @@
 # OPIc Question Generator Skill
 
-[한국어 README 보기](README.ko.md)
-
-> Unofficial practice skill for **OPIc English only**
+English | [한국어](README.ko.md)
 
 ![OPIc Question Generator](assets/cover.png)
 
-## Overview
+## What This Is
 
-This skill helps users practice **OPIc English** by generating practice prompts and improving spoken answers.
+This repository contains a simple skill for **OPIc English** practice.
 
-It can:
+It helps an AI agent do three things:
 
-- generate OPIc-style practice questions
-- build survey-based question bundles
-- generate role-play and late hard follow-up questions
-- correct user answers
-- suggest more natural spoken expressions
-- show `IM / IH / AL` style rewrites for practice
+- make OPIc-style practice questions
+- correct spoken answers
+- rewrite answers in more natural English
 
-It does **not**:
+## Why It Is Useful
 
-- provide official live test questions
-- reproduce proprietary course materials
-- guarantee any official OPIc score
+- you can use it in plain language
+- you do not need a strict command format
+- it works for question practice, correction, and coaching
+- it can be reused across different AI tools
 
-## Scope
+## How People Can Use It
 
-This skill supports:
-
-- **OPIc English**
-
-This skill does not target:
-
-- OPIc in other languages
-- general English conversation beyond OPIc-style practice
-
-## How To Use
-
-### For AI Agents
-
-Use this skill when the user asks for:
-
-- OPIc mock questions
-- survey-based practice sets
-- answer correction for OPIc speaking
-- natural spoken rewrites
-- IM / IH / AL style answer examples
-
-Recommended workflow:
-
-1. identify the user's survey topics if provided
-2. identify the requested difficulty band if provided
-3. choose one output mode
-4. generate only what the user asked for
-
-Preferred output modes:
-
-- questions only
-- questions + types
-- questions + MP
-- questions + sample answers
-- answer correction
-- answer correction + natural rewrite
-- answer correction + IM/IH/AL versions
-
-### For Human Users
-
-You can use this skill by asking in plain language.
+Just ask naturally.
 
 Examples:
 
 ```text
-Generate a 15-question OPIc English mock test.
-survey_topics: movies, youtube, cafe
-difficulty_band: 3-4
-language: English
+Make a 15-question OPIc mock test.
 ```
 
 ```text
-Correct my answer and explain what sounds unnatural.
-Show a more natural spoken version too.
+Correct my answer and make it sound more natural.
 ```
 
 ```text
-Rewrite my answer in IM, IH, and AL speaking styles.
+Rewrite this answer in IM, IH, and AL styles.
 ```
 
-## Input Options
+You can give extra details if you want, but you do not need to.
 
-You can provide these options directly in your request.
+## How To Use It With AI Tools
 
-- `survey_topics`
-  Example: `movies, youtube, cafe, technology`
-- `difficulty_band`
-  Example: `1-2`, `3-4`, `5-6`
-- `difficulty_detail`
-  Example: `3-3`, `4-4`, `5-5`, `6-6`
-- `question_count`
-  Example: `1`, `3`, `15`
-- `output_mode`
-  Example: `questions only`, `questions + MP`, `answer correction`
-- `language`
-  Example: `Korean`, `English`, `mixed`
-- `include_roleplay`
-  Example: `yes`, `no`
-- `include_hard_followups`
-  Example: `yes`, `no`
-- `answer_style`
-  Example: `corrected only`, `natural rewrite`, `IM/IH/AL`
+### Codex
 
-## Difficulty Model
+Use this repository as a skill source.
 
-This skill uses two layers for difficulty.
+- install or copy the skill folder
+- let Codex read `SKILL.md`
+- ask in plain language
 
-### 1. `difficulty_band`
+### Claude Code
 
-Main generation control:
+Use this repository as an instruction source.
 
-- `1-2`
-  simpler prompts, lighter past-experience pressure
-- `3-4`
-  standard combo structure with role-play
-- `5-6`
-  harder follow-up questions and stronger comparison / problem handling
+Practical method:
 
-### 2. `difficulty_detail`
+- copy the skill folder into your local workflow area, or
+- give Claude Code the repository and ask it to follow `SKILL.md`
 
-Fine preference only:
-
-- `1-1`, `1-2`, `2-1`, `2-2`
-- `3-3`, `3-4`, `4-3`, `4-4`
-- `5-5`, `5-6`, `6-5`, `6-6`
-
-The skill should not treat every detail value as a completely separate engine.
-
-## Main Output Types
-
-### 1. Question Generation
-
-- single prompt
-- 3-question combo
-- 15-question mock test
-- role-play block
-- hard follow-up block
-
-### 2. Answer Correction
-
-- correct grammar and wording
-- preserve the original meaning
-- make the answer easier to say aloud
-
-### 3. Natural Spoken Rewrite
-
-- suggest simpler spoken expressions
-- suggest smoother OPIc-style phrasing
-
-### 4. Level-Styled Rewrite
-
-When requested, the skill may show:
-
-- `IM version`
-- `IH version`
-- `AL version`
-
-These are **practice style examples**, not official scoring guarantees.
-
-## Notes For Public Use
-
-- This is an **unofficial practice skill**.
-- It is based on publicly available OPIc structure and common practice patterns.
-- It does not claim to reproduce the official live question bank.
-- It is intended for practice and coaching only.
-
-## Repository Structure
+Then use normal requests such as:
 
 ```text
-opic-question-generator/
-├── SKILL.md
-├── README.md
-├── README.ko.md
-├── agents/
-│   └── openai.yaml
-└── assets/
-    └── cover.png
+Generate OPIc practice questions for movies and cafes.
 ```
 
-## Before Publishing
+### ChatGPT
 
-Before uploading to GitHub, confirm:
+ChatGPT does not normally read `SKILL.md` as a native skill file.
 
-- the image file is placed at `assets/cover.png`
-- the project is described as **OPIc English only**
-- no proprietary course text has been copied
-- no official live question claim is made
+Practical method:
+
+- open this repository
+- copy the important rules from `SKILL.md`
+- place them into your custom instructions or project instructions
+- then chat normally
+
+### Gemini
+
+Gemini also usually works better with copied instructions than with raw skill files.
+
+Practical method:
+
+- use this repository as a reference
+- copy the core rules into your working instructions
+- then ask in plain language
+
+## Files
+
+- `SKILL.md`: main behavior rules
+- `agents/openai.yaml`: metadata
+- `README.md`: English guide
+- `README.ko.md`: Korean guide
+
+## Notes
+
+- This is for **OPIc English only**
+- This is an unofficial practice tool
+- It does not provide official live test questions
 
