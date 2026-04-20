@@ -41,20 +41,6 @@ Rewrite this answer in IM, IH, and AL styles.
 
 You can give extra details if you want, but you do not need to.
 
-## Setup
-
-### If your AI tool supports skills
-
-1. install or copy this skill folder
-2. make sure the tool can read `SKILL.md`
-3. start asking in plain language
-
-### If your AI tool does not support skills natively
-
-1. open `SKILL.md`
-2. copy the core rules into your instructions or project prompt
-3. ask in plain language
-
 If you are not sure how to start, use one of these:
 
 ### 1. Random practice
@@ -100,6 +86,39 @@ Rewrite this answer in IM, IH, and AL styles.
 
 ```text
 Rewrite this answer in easier spoken English.
+```
+
+## Setup
+
+### Simple setup for skill-compatible tools
+
+1. install or copy this folder
+2. make sure the tool can read `SKILL.md`
+3. start asking in plain language
+
+Example:
+
+```text
+Load this skill and help me practice OPIc English.
+```
+
+### Simple setup for tools without native skill support
+
+1. open `SKILL.md`
+2. copy the core rules into your custom instructions or project prompt
+3. start asking in plain language
+
+Example instruction:
+
+```text
+Use this repository as my OPIc English practice guide.
+Generate questions, correct my answers, and rewrite them in more natural spoken English.
+```
+
+Example request after setup:
+
+```text
+Make a random OPIc mock test.
 ```
 
 ## Compatibility
