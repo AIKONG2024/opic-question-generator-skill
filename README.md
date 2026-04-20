@@ -21,7 +21,7 @@ It helps an AI agent do three things:
 - it works for question practice, correction, and coaching
 - it can be reused across different AI tools
 
-## How People Can Use It
+## Quick Start
 
 Just ask naturally.
 
@@ -41,51 +41,19 @@ Rewrite this answer in IM, IH, and AL styles.
 
 You can give extra details if you want, but you do not need to.
 
-## How To Use It With AI Tools
+## Compatibility
 
-### Codex
+Best used with skill-compatible agents such as:
 
-Use this repository as a skill source.
+- Codex
+- Claude Code
 
-- install or copy the skill folder
-- let Codex read `SKILL.md`
-- ask in plain language
+It can also be adapted to tools like:
 
-### Claude Code
+- ChatGPT
+- Gemini
 
-Use this repository as an instruction source.
-
-Practical method:
-
-- copy the skill folder into your local workflow area, or
-- give Claude Code the repository and ask it to follow `SKILL.md`
-
-Then use normal requests such as:
-
-```text
-Generate OPIc practice questions for movies and cafes.
-```
-
-### ChatGPT
-
-ChatGPT does not normally read `SKILL.md` as a native skill file.
-
-Practical method:
-
-- open this repository
-- copy the important rules from `SKILL.md`
-- place them into your custom instructions or project instructions
-- then chat normally
-
-### Gemini
-
-Gemini also usually works better with copied instructions than with raw skill files.
-
-Practical method:
-
-- use this repository as a reference
-- copy the core rules into your working instructions
-- then ask in plain language
+For tools without native skill support, reuse the rules in `SKILL.md` as instructions.
 
 ## Files
 
@@ -99,4 +67,3 @@ Practical method:
 - This is for **OPIc English only**
 - This is an unofficial practice tool
 - It does not provide official live test questions
-
