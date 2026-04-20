@@ -1,148 +1,156 @@
 # OPIc Question Generator Skill
 
-[English](README.md) | 한국어
+[English](README.md) | [한국어](README.ko.md)
 
 ![OPIc Question Generator](assets/cover.png)
 
-## 이게 뭔가요?
+> **An AI agent skill for OPIc English practice — question generation, answer correction, and level coaching, all in plain language.**
 
-이 저장소는 **OPIc English** 연습용 skill입니다.
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)
+[![Works with Claude Code](https://img.shields.io/badge/works%20with-Claude%20Code-blueviolet?style=flat-square)](https://claude.ai/code)
+[![Works with Codex](https://img.shields.io/badge/works%20with-Codex-green?style=flat-square)](https://openai.com/codex)
+[![OPIc English](https://img.shields.io/badge/OPIc-English%20Only-orange?style=flat-square)](https://www.actfl.org/opic)
 
-AI가 아래 3가지를 하도록 도와줍니다.
+---
 
-- 오픽 스타일 문제 생성
-- 답변 교정
-- 더 자연한 영어로 다시 써주기
+## What Is This Skill?
 
-## 왜 좋은가요?
+This repository contains a **`SKILL.md` file** — a set of instructions that turns any compatible AI agent into a dedicated **OPIc English practice coach**.
 
-- 자연어로 바로 사용할 수 있습니다
-- 복잡한 명령 형식이 필요 없습니다
-- 문제 연습, 교정, 코칭에 모두 쓸 수 있습니다
-- 여러 AI 도구에서 재사용할 수 있습니다
+Load it once, and your agent gains the following abilities:
 
-## 빠른 사용법
+| Ability | What it does |
+|---|---|
+| 📝 **Generate Questions** | Create OPIc-style questions from any topic, or from your actual survey topics |
+| 🎯 **Build Mock Tests** | Generate full 15-question mock tests that mirror the real exam format |
+| ✏️ **Correct Answers** | Fix grammar, naturalness, and fluency in your spoken-style answers |
+| 🔄 **Level Rewriting** | Rewrite the same answer in IM, IH, and AL styles so you can see the difference |
+| 🤝 **Interactive Coaching** | Simulate a real practice session — one question at a time, with instant feedback |
 
-그냥 자연스럽게 요청하면 됩니다.
+No special commands needed. Just talk to your agent naturally.
 
-예:
+---
 
-```text
-오픽 모의고사 15문항 만들어줘.
+## Usage
+
+### 🎲 Random practice
+
+Warm up with random questions at any time.
+
+```
+Give me a random OPIc English question.
 ```
 
-```text
-내 답변을 교정해주고 더 자연하게 바꿔줘.
+```
+Make a random 15-question OPIc mock test.
 ```
 
-```text
-이 답변을 IM, IH, AL 느낌으로 바꿔줘.
+---
+
+### 📋 Practice with your survey topics
+
+Tell the agent your topics and it will generate questions that match the real exam format.
+
+```
+My survey topics are movies, YouTube, cafes, and technology.
+Make a 15-question OPIc mock test based on these topics.
 ```
 
-원하면 세부 조건을 더 붙일 수 있지만, 꼭 그럴 필요는 없습니다.
-
-처음이라 어떻게 요청해야 할지 모르겠다면, 아래 예시 중 하나를 그대로 써도 됩니다.
-
-### 1. 랜덤 문제부터 시작
-
-```text
-오픽 영어 문제 랜덤으로 하나 내줘.
+```
+Use only movies and cafes.
+Make a 3-question combo (description + routine + past experience).
 ```
 
-```text
-오픽 모의고사 15문항 랜덤으로 만들어줘.
+> 💡 **Tip:** In the real OPIc exam, questions often come in a "combo" of 3 — describing something, talking about your routine, and recalling a past experience, all on the same topic. Ask for combo drills to practice this format.
+
+---
+
+### ✏️ Correct your answer
+
+Paste an answer you wrote or said, and ask for corrections.
+
+```
+Here is my answer:
+
+"I usually go to cafe on weekend. I like to drink americano and read book.
+Last week, I went to new cafe near my house. It was very cozy and quiet."
+
+Correct it and make it sound more natural.
 ```
 
-### 2. 내가 고른 서베이 주제로 연습
+---
 
-```text
-내 서베이 주제는 movies, youtube, cafe, technology야.
-이걸로 오픽 모의고사 15문항 만들어줘.
+### 🤝 Interactive coaching session
+
+Ask the agent to coach you one question at a time, just like a real practice partner.
+
+```
+Coach me like an OPIc practice partner.
+Give me one question at a time, wait for my answer, then correct it and move on.
 ```
 
-```text
-movies, cafe 주제로만 3문항 콤보 만들어줘.
+---
+
+### 📈 Level up your answer
+
+See what your answer looks like at different OPIc levels — IM, IH, and AL — so you know exactly what to aim for.
+
+```
+Here is my answer. Rewrite it in IM, IH, and AL styles.
 ```
 
-### 3. 내가 쓴 답변 교정
-
-```text
-내가 쓴 답변이야. 교정해주고 더 자연하게 바꿔줘.
+```
+Rewrite this answer in easier spoken English (Intermediate Mid style).
 ```
 
-### 4. 코치처럼 연습
+---
 
-```text
-오픽 연습 파트너처럼 진행해줘.
-문제 하나씩 내고 내 답변을 바로 교정해줘.
-```
+## Setup
 
-### 5. 더 쉬운 표현 / 더 높은 느낌으로 바꾸기
+### ✅ Option A — Skill-compatible tools (Claude Code, Codex)
 
-```text
-이 답변을 IM, IH, AL 느낌으로 바꿔줘.
-```
+These tools can read `SKILL.md` automatically.
 
-```text
-이 답변을 더 쉬운 spoken English로 바꿔줘.
-```
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/AIKONG2024/opic-question-generator-skill.git
+   ```
+2. Make sure your agent tool can access the `SKILL.md` file in the repository root.
+3. Start practicing:
+   ```
+   Load this skill and help me practice OPIc English.
+   ```
 
-## 설정 방법
+---
 
-### skill을 지원하는 AI 도구에서 쓰는 경우
+### 🛠️ Option B — Tools without native skill support (ChatGPT, Gemini, Claude.ai)
 
-1. 이 폴더를 설치하거나 복사합니다
-2. 도구가 `SKILL.md`를 읽을 수 있게 합니다
-3. 그 다음 자연어로 요청하면 됩니다
+1. Open [`SKILL.md`](SKILL.md) in this repository and copy the entire contents.
+2. Paste it into your tool's **System Prompt**, **Custom Instructions**, or **Project Instructions** field.
+3. Start practicing:
+   ```
+   Make a random OPIc mock test.
+   ```
 
-예:
+**Claude.ai:** Go to **Projects** → create a new project → paste `SKILL.md` into **Project Instructions**.  
+**ChatGPT:** Go to **Settings → Personalization → Custom Instructions**.
 
-```text
-이 skill을 불러오고 OPIc English 연습을 도와줘.
-```
+| Tool | Support | Where to paste |
+|---|---|---|
+| **Claude Code** | ✅ Native | Load from repo |
+| **Codex** | ✅ Native | Load from repo |
+| **Claude.ai** | Manual | Project Instructions |
+| **ChatGPT** | Manual | Custom Instructions |
+| **Gemini** | Manual | System Prompt |
 
-### skill을 네이티브로 지원하지 않는 AI 도구에서 쓰는 경우
+---
 
-1. `SKILL.md`를 엽니다
-2. 핵심 규칙을 custom instructions 또는 project prompt에 넣습니다
-3. 그 다음 자연어로 요청하면 됩니다
+## Notes
 
-예시 지시문:
+- This skill is for **OPIc English only** — OPIc Korean (OPIc-K) is not supported.
+- This is an **unofficial** practice tool, not affiliated with ACTFL or any test provider.
+- It does not contain or reproduce official OPIc exam questions.
 
-```text
-이 저장소를 OPIc English 연습 가이드로 사용해.
-문제를 만들고, 내 답변을 교정하고, 더 자연한 spoken English로 다시 써줘.
-```
+---
 
-설정 후 예시 요청:
-
-```text
-오픽 모의고사 랜덤으로 만들어줘.
-```
-
-## 호환 도구
-
-잘 맞는 도구:
-
-- Codex
-- Claude Code
-
-비슷하게 응용할 수 있는 도구:
-
-- ChatGPT
-- Gemini
-
-native skill 지원이 없는 도구에서는 `SKILL.md`의 핵심 규칙을 지시문으로 옮겨서 사용할 수 있습니다.
-
-## 파일 구성
-
-- `SKILL.md`: 핵심 동작 규칙
-- `agents/openai.yaml`: 메타데이터
-- `README.md`: 영어 설명
-- `README.ko.md`: 한국어 설명
-
-## 참고
-
-- **OPIc English only**
-- 비공식 연습용 도구입니다
-- 공식 라이브 시험 문제는 제공하지 않습니다
+*Good luck on your test! 🎯*
