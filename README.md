@@ -1,7 +1,5 @@
 # OPIc Question Generator Skill
 
-[English](README.md) | [한국어](README.ko.md)
-
 ![OPIc Question Generator](assets/cover.png)
 
 > **AI 에이전트용 OPIc English 연습 Skill — 문제 생성, 답변 교정, 레벨 코칭을 자연어로.**
