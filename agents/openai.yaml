@@ -1,0 +1,4 @@
+version: 1
+display_name: OPIc Question Generator
+short_description: Generates realistic survey-based OPIc mock questions.
+default_prompt: Generate realistic OPIc mock questions based on my survey and target difficulty.
