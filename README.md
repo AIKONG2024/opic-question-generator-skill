@@ -28,68 +28,51 @@
 
 ## 실제로 어떻게 쓰나요?
 
-OPIc은 **말하기 시험**입니다. 크게 두 가지 연습 방식으로 활용할 수 있어요.
+사실상 OPIc은 **말하기 시험**입니다. SKILLs를 chatGPT, claude 에 연결해서 사용해보세요. 
 
 ### 🗣️ 방식 1 — 말하기 연습 (실전에 가장 가깝게)
 
-**ChatGPT Advanced Voice Mode**에 이 skill을 연결해 사용합니다 ([음성 연습 설정](#음성-연습-설정--chatgpt-advanced-voice-mode) 참고). AI가 소리내어 질문하고, 내가 소리내어 답하면 AI가 바로 피드백을 줍니다. 실제 시험 환경과 가장 유사한 연습 방법입니다.
-
-### ✍️ 방식 2 — 작성 + 교정
-
-1. 모의고사를 뽑아달라고 요청
-2. 답변을 작성 (종이든, 메모앱이든, 채팅창에 직접이든)
-3. 답변을 붙여넣으면 AI가 교정
-
-특별한 형식 없이 그냥 답변을 붙여넣으면 됩니다. AI가 알아서 교정해줘요.
+**ChatGPT Advanced Voice Mode**에 이 skill을 연결해 사용합니다.   
+([음성 연습 설정](#음성-연습-설정--chatgpt-advanced-voice-mode) 참고).  
+AI가 소리내어 질문하고, 내가 소리내어 답하면 AI가 바로 피드백을 줍니다. 실제 시험 환경과 가장 유사한 연습 방법입니다.
 
 ---
 
 ## 사용법
 
-### 모의고사 뽑기
+### 모의고사 진행하기
 
 ```
-오픽 모의고사 15문항 만들어줘.
-내 서베이 주제는 movies, youtube, cafe, technology야.
+(말로)오픽 모의고사 15문항 만들고 모의고사 진행해. 내 서베이 주제는 movies, youtube, cafe, technology야.
 ```
 
 서베이 주제를 아직 모른다면 랜덤으로:
 ```
-오픽 모의고사 15문항 랜덤으로 만들어줘.
+(말로) 랜덤으로 모의고사 진행해.
 ```
-
-> 💡 **팁:** 실제 OPIc에서는 같은 주제를 3연속으로 다르게 묻는 **콤보 문제**가 나옵니다 (묘사 → 루틴 → 과거 경험). 콤보 형식으로 연습하고 싶다면:
-> ```
-> cafe 주제로 3문항 콤보 만들어줘.
-> ```
 
 ---
 
 ### 답변 교정받기
 
-답변을 작성한 뒤 그냥 붙여넣으면 됩니다. 아무 설명 없이 바로 던져도 AI가 알아서 교정해줍니다:
-
 ```
-I usually go to cafe on weekend. I like to drink americano and read book.
-Last week, I went to new cafe near my house. It was very cozy and quiet.
+모의고사 결과 채점해줘.
 ```
 
 모의고사 여러 답변을 한꺼번에 교정받고 싶다면 번호를 붙여서:
 
 ```
-Q1. I usually go to cafe on weekend...
-Q3. My favorite movie is Interstellar. I watched it when I was in high school...
+(말로) 1번문제 3번문제 결과 채점해줘.
 ```
 
 ---
 
 ### 인터랙티브 코칭 (실시간 1문제씩)
 
-다음 문제를 보기 전에 직접 답하는 방식으로 연습하고 싶다면:
+하나씩 연습하고 싶다면:
 
 ```
-오픽 연습 파트너처럼 진행해줘.
-문제 1개씩 내고, 내 답변을 받은 다음 교정하고 다음 문제로 넘어가줘.
+(말로) 문제 1개씩 내고, 내 답변을 받은 다음 교정하고 다음 문제로 넘어가줘.
 서베이 주제는 movies, cafe, technology야.
 ```
 
@@ -100,9 +83,7 @@ Q3. My favorite movie is Interstellar. I watched it when I was in high school...
 내 답변이 IM, IH, AL 수준에서 어떻게 달라지는지 직접 비교해보고 싶다면:
 
 ```
-이 답변을 IM, IH, AL 스타일로 각각 바꿔줘:
-
-I usually go to cafe on weekend. I like to drink americano and read book.
+(말로) 말한 답변을 IH 수준, AL수준으로 알려줘.
 ```
 
 ---
