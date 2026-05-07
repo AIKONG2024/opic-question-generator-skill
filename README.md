@@ -1,4 +1,4 @@
-# OPIcU(오피쿠) SKILLS
+# OPIcU(오피쿠)
 
 ![OPIc Question Generator](assets/cover.png)
 
