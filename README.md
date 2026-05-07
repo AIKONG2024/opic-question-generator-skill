@@ -1,157 +1,131 @@
-# OPIc Question Generator Skill
+# OPIcU(오피쿠) SKILLS
 
 ![OPIc Question Generator](assets/cover.png)
 
-> **AI 에이전트용 OPIc English 연습 Skill — 문제 생성, 답변 교정, 레벨 코칭을 자연어로.**
+> 한국인을 위한 **OPIc 영어 모의고사 코치** — Background Survey → 15문항 → 한국어 피드백 → 한 문장씩 재연습.
+> ChatGPT · Claude · Gemini 어디서나 **10초 안에 시작**합니다.
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/Agent%20Skills-compatible-brightgreen?style=flat-square)](https://agentskills.io)
-[![OPIc English](https://img.shields.io/badge/OPIc-English%20Only-orange?style=flat-square)](https://www.actfl.org/opic)
 
 ---
 
-## 이 Skill이 뭔가요?
+## ⚡ 10초 만에 시작 — 이 한 줄을 복사해서 챗봇에 붙여넣으세요
 
-이 저장소는 **`SKILL.md` 파일** 하나를 포함하고 있습니다. 호환되는 AI 에이전트에 로드하면 **OPIc English 전용 연습 코치**로 변신합니다.
+ChatGPT, Claude, Gemini 어디든 새 채팅에 **이것만 붙여넣고 Enter**:
 
-로드하면 에이전트가 할 수 있는 것들:
+```
+다음 URL의 SKILL.md 내용을 그대로 따라서, 너는 지금부터 OPIc 모의고사 코치로 동작해줘. 준비되면 한국어로 "오픽 모의고사 시작할까요?"라고 물어봐.
 
-| 기능 | 설명 |
+https://raw.githubusercontent.com/AIKONG2024/opic-question-generator-skill/main/SKILL.md
+```
+
+AI가 알아서 위 URL을 읽고 OPIc 코치로 변신합니다. **터미널, 설치, 폴더 같은 건 전혀 필요 없습니다.**
+
+> 모바일 ChatGPT 앱 사용자라면 [👉 이 링크](https://chatgpt.com/?q=%EB%8B%A4%EC%9D%8C%20URL%EC%9D%98%20SKILL.md%20%EB%82%B4%EC%9A%A9%EC%9D%84%20%EA%B7%B8%EB%8C%80%EB%A1%9C%20%EB%94%B0%EB%9D%BC%EC%84%9C%2C%20%EB%84%88%EB%8A%94%20%EC%A7%80%EA%B8%88%EB%B6%80%ED%84%B0%20OPIc%20%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC%20%EC%BD%94%EC%B9%98%EB%A1%9C%20%EB%8F%99%EC%9E%91%ED%95%B4%EC%A4%98.%20%EC%A4%80%EB%B9%84%EB%90%98%EB%A9%B4%20%ED%95%9C%EA%B5%AD%EC%96%B4%EB%A1%9C%20%22%EC%98%A4%ED%94%BD%20%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC%20%EC%8B%9C%EC%9E%91%ED%95%A0%EA%B9%8C%EC%9A%94%3F%22%EB%9D%BC%EA%B3%A0%20%EB%AC%BC%EC%96%B4%EB%B4%90.%0A%0Ahttps%3A%2F%2Fraw.githubusercontent.com%2FAIKONG2024%2Fopic-question-generator-skill%2Fmain%2FSKILL.md)을 누르면 미리 작성된 프롬프트로 ChatGPT가 열립니다. Enter만 누르세요.
+
+준비되면 그냥 말하면 됩니다:
+
+```
+오픽 모의고사 시작해줘. 난이도 5-6.
+```
+
+---
+
+## 매일 쓰고 싶다면 — Project / Gem에 등록 (1분, 한 번만)
+
+매번 위 한 줄을 붙여넣는 게 귀찮다면 본인 챗봇에 "전용 봇"으로 만들어 두세요. 한 번 만들면 영원히 그 안에서 OPIc 모드로 동작합니다.
+
+### ChatGPT (Projects)
+1. ChatGPT 좌측 메뉴 → **Projects → New Project**
+2. 이름: `OPIc 모의고사`
+3. **Instructions**에 위의 "마법의 한 줄"을 그대로 붙여넣기
+4. 저장 후 그 Project 안에서 채팅 시작
+
+### Claude (Projects)
+1. Claude 좌측 메뉴 → **Projects → Create Project**
+2. **Project instructions**에 위의 "마법의 한 줄" 붙여넣기 (Claude는 URL을 알아서 읽습니다)
+3. 저장 후 사용
+
+### Gemini (Gems)
+1. Gemini → **Gems → New Gem**
+2. **Instructions**에 위의 "마법의 한 줄" 붙여넣기
+3. 저장 후 그 Gem과 대화
+
+> 💡 **음성 연습:** 위 방식으로 만든 Project/Gem을 ChatGPT Voice 또는 Gemini Live에서 그대로 열면 음성으로 OPIc 연습이 됩니다. 별도 설정 없습니다.
+
+---
+
+## 자주 쓰는 명령어
+
+| 입력 | 동작 |
 |---|---|
-| 📝 **문제 생성** | 어떤 주제로든 OPIc 스타일 문제 생성 (내 서베이 주제 포함) |
-| 🎯 **모의고사 생성** | 실제 시험과 동일한 형식의 15문항 모의고사 |
-| ✏️ **답변 교정** | 작성하거나 말한 답변의 문법, 자연스러움, 유창성 교정 |
-| 🔄 **레벨별 리라이팅** | 같은 답변을 IM, IH, AL 수준으로 변환해 차이 비교 |
-| 🤝 **인터랙티브 코칭** | 문제 1개씩 → 내 답변 → 즉시 피드백의 실전 연습 |
+| `오픽 모의고사 시작해줘` | 모의고사 시작 (난이도 묻기) |
+| `난이도 5-6으로 시작해줘` | 난이도 지정해서 바로 시작 |
+| `next` | 다음 문제로 넘어가기 |
+| `question again` | 같은 문제 다시 듣기 |
+| `이 답변을 한 문장씩 연습하자` | 마지막 답변을 문장 단위로 교정 |
+| `피드백 짧게 해줘` | 짧은 교정만 받기 (Voice 모드 추천) |
+| `목표는 IH야` / `목표는 IM3야` | 목표 등급에 맞춰 답변 난이도 조정 |
 
 ---
 
-## 실제로 어떻게 쓰나요?
+## 핵심 기능
 
-사실상 OPIc은 **말하기 시험**입니다. SKILLs를 chatGPT, claude 에 연결해서 사용해보세요. 
-
-### 🗣️ 방식 1 — 말하기 연습 (실전에 가장 가깝게)
-
-**ChatGPT Advanced Voice Mode**에 이 skill을 연결해 사용합니다.   
-([음성 연습 설정](#음성-연습-설정--chatgpt-advanced-voice-mode) 참고).  
-AI가 소리내어 질문하고, 내가 소리내어 답하면 AI가 바로 피드백을 줍니다. 실제 시험 환경과 가장 유사한 연습 방법입니다.
-
----
-
-## 사용법
-
-### 모의고사 진행하기
-
-```
-(말로)오픽 모의고사 15문항 만들고 모의고사 진행해. 내 서베이 주제는 movies, youtube, cafe, technology야.
-```
-
-서베이 주제를 아직 모른다면 랜덤으로:
-```
-(말로) 랜덤으로 모의고사 진행해.
-```
+- 난이도 선택: `3-4`, `5-6`
+- 실제 시험형 Background Survey 자동 출력
+- Q1–Q15 모의고사 (롤플레이 Q11–Q13, 고난도 비교/이슈/의견 Q14–Q15 포함)
+- 한국어 피드백 + 모범 답변 + 표현 교정
+- "next"라고 말하기 전까지 다음 문제로 넘어가지 않음
+- 한 문장씩 끊어서 말하기 연습 모드
 
 ---
 
-### 답변 교정받기
+## 개발자용 — Agent Skill 표준 설치
 
-```
-모의고사 결과 채점해줘.
-```
-
-모의고사 여러 답변을 한꺼번에 교정받고 싶다면 번호를 붙여서:
-
-```
-(말로) 1번문제 3번문제 결과 채점해줘.
-```
-
----
-
-### 인터랙티브 코칭 (실시간 1문제씩)
-
-하나씩 연습하고 싶다면:
-
-```
-(말로) 문제 1개씩 내고, 내 답변을 받은 다음 교정하고 다음 문제로 넘어가줘.
-서베이 주제는 movies, cafe, technology야.
-```
-
----
-
-### 레벨업 리라이팅
-
-내 답변이 IM, IH, AL 수준에서 어떻게 달라지는지 직접 비교해보고 싶다면:
-
-```
-(말로) 말한 답변을 IH 수준, AL수준으로 알려줘.
-```
-
----
-
-## 음성 연습 설정 — ChatGPT Advanced Voice Mode
-
-OPIc은 말하기 시험이니 실제로 소리내어 연습하는 게 중요합니다. 가장 효과적인 방법은 **ChatGPT Advanced Voice Mode**에 이 skill을 붙여 쓰는 것입니다.
-
-**Step 1.** 이 저장소에서 [`SKILL.md`](SKILL.md)를 열고 전체 내용을 복사합니다.
-
-**Step 2.** ChatGPT → **설정 → 개인화 → Custom Instructions**  
-**"ChatGPT에 대해 알아야 할 사항"** 필드에 붙여넣고 저장합니다.
-
-**Step 3.** ChatGPT 모바일 앱을 열고 오른쪽 하단의 **음성 아이콘**을 탭합니다.  
-Advanced Voice Mode가 시작됩니다.
-
-**Step 4.** 말로 요청합니다:
-```
-오픽 질문 하나 해줘. 내가 답하면 영어 교정해주고 다음 문제로 넘어가줘.
-```
-
-ChatGPT가 소리내어 질문하고, 내 말을 듣고, 교정을 소리로 알려줍니다. 집에서 할 수 있는 가장 실전에 가까운 연습입니다.
-
-> **조건:** ChatGPT Plus 이상 필요. Advanced Voice Mode는 iOS / Android 앱에서 사용 가능합니다.
-
----
-
-## 설치 방법
-
-### CLI 에이전트 도구 (Claude Code, Codex, Gemini CLI 등)
-
-이 skill은 [Agent Skills 오픈 표준](https://agentskills.io)을 따릅니다. CLI 에이전트 도구를 쓰고 있다면 `skills` CLI 하나로 모든 도구에 한 번에 설치할 수 있습니다:
+Claude Code, Codex CLI, Cursor, Gemini CLI를 쓰는 개발자라면 이 레포를 표준 Agent Skill로 설치할 수 있습니다.
 
 ```bash
+# 자동 설치 (Vercel skills CLI)
 npx skills add AIKONG2024/opic-question-generator-skill
+
+# 수동 설치 — Claude Code 예시
+git clone https://github.com/AIKONG2024/opic-question-generator-skill.git
+cp -r opic-question-generator-skill ~/.claude/skills/
 ```
 
-설치된 에이전트를 자동 감지해서 각각의 폴더에 심링크를 생성해줍니다. **Claude Code, Codex CLI, Gemini CLI, OpenClaw, Cursor** 등 Agent Skills 호환 도구라면 전부 한 번에 설정됩니다.
+도구별 설치 경로:
 
-> **npx가 없다면?** Node.js 설치가 필요합니다. 또는 아래 표를 참고해 수동으로 클론하세요.
-
-| 도구 | 수동 설치 경로 |
+| 도구 | 경로 |
 |---|---|
-| Claude Code | `~/.claude/skills/` |
-| Codex CLI | `~/.codex/skills/` 또는 `.agents/skills/` |
-| Gemini CLI | `gemini skills install <repo-url>` |
-| OpenClaw | `~/.openclaw/skills/` |
-| Hermes | `~/.hermes/skills/` |
+| Claude Code | `~/.claude/skills/` (전역) 또는 `.claude/skills/` (프로젝트) |
+| Codex CLI | `~/.codex/skills/` |
+| Cursor | `.cursor/skills/` |
+| Gemini CLI | `.gemini/skills/` |
 
-### GUI 도구
-
-**Claude.ai / Claude Cowork:**
-1. **설정 → 기능** → **코드 실행 및 파일 생성** 활성화
-2. 이 GitHub 페이지에서 **Code → Download ZIP**
-3. **Customize → Skills → [+] → Create skill → Upload a skill** → ZIP 선택 후 업로드
-4. Skills 목록에서 토글 켜기
-
-**Gemini 웹:**  
-Native skill 지원 없음. [`SKILL.md`](SKILL.md) 내용을 복사해 대화 첫 메시지로 전송:
-```
-이번 대화에서 다음 지시를 따라줘: [여기에 붙여넣기]
-```
+새 세션을 시작하면 자동으로 활성화됩니다. "오픽 모의고사 시작해줘"라고 입력하면 됩니다.
 
 ---
 
-## 참고
+## 이게 왜 잘 되나요?
 
-- **비공식** 연습용 도구로, ACTFL 또는 시험 기관과 무관합니다
-- 공식 OPIc 시험 문제를 포함하거나 재현하지 않습니다
+이 Skill은 **두 가지 표준**을 동시에 만족하도록 만들어졌습니다:
+
+1. **Agent Skills 표준** — `SKILL.md` 파일이 YAML frontmatter를 갖춘 정식 Skill 포맷이라, Claude Code/Codex/Cursor 등에서 자동 인식됩니다.
+2. **AI-readable README** — `SKILL.md`가 GitHub raw URL로 직접 접근 가능해서, ChatGPT/Claude/Gemini가 URL 한 줄로 읽고 자기 자신을 설정할 수 있습니다.
+
+덕분에 일반 사용자는 "복붙 한 번"만, 개발자는 "표준 설치"를 선택할 수 있습니다.
 
 ---
+
+## 주의사항
+
+- 공식 OPIc 시험을 대체하지 않습니다. AI 생성 질문/피드백은 실제 시험과 완전히 같지는 않습니다.
+- 음성 인식은 종종 틀립니다. 중요한 답변은 텍스트로도 확인하세요.
+- 이 레포 외부의 출처 불분명한 SKILL.md는 신중히 검토 후 사용하세요.
+
+---
+
+## License
+
+MIT — 학습/공개용으로 자유롭게 수정해서 사용하세요.
